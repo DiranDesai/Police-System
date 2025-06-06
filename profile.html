@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Police Management System</title>
+</head>
+<body>
+  <div class="sidebar">
+    <span class="material-icons menu-icon-close">close</span>
+    <div>
+      <img src="images/logo2.png" class="logo" alt="" />
+    </div>
+    <ul>
+      <li class="active">
+        <a href="index.html">
+          <span class="material-icons">dashboard</span> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="cases.html">
+          <span class="material-icons">gavel</span> Criminal Cases
+        </a>
+      </li>
+      <li>
+        <a href="criminals.html">
+          <span class="material-icons">block</span> Criminals
+        </a>
+      </li>
+      <li>
+        <a href="duty-schedule.html">
+          <span class="material-icons">schedule</span> Duty Schedule
+        </a>
+      </li>
+      <li>
+        <a href="add-officer.html">
+          <span class="material-icons">person_add</span> Add Officer
+        </a>
+      </li>
+      <li>
+        <a href="duty-roster.html">
+          <span class="material-icons">calendar_today</span> Duty Roster
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span class="material-icons">support_agent</span> Contact/Support
+        </a>
+      </li>
+    </ul>
+  </div>
+    <main>
+      <div class="navbar flex align-items justify-between">
+        <div>
+          <input type="text" />
+          <span class="material-icons menu-icon">menu</span>
+        </div>
+        <div class="flex nav-profile items-center justify-between">
+          <img src="images/officer4.avif" class="officer-profile" alt="" />
+          <button type="button" class="signout-btn">
+            <span class="material-icons">logout</span> SignOut
+          </button>
+        </div>
+      </div>
+        <div class="main-content">
+            <div class="grid officer-container grid-t-2 space-x-2">
+                <div>
+                    <h3 class="heading-1">Personal Information</h3>
+                    <div class="officer-page-profile card-page">
+                        <div class="profile-header">
+                          <img src="images/officer6.avif" alt="Officer Photo">
+                          <div class="officer-info">
+                            <h2>Shepherd Kamando</h2>
+                            <p>Badge #1245</p>
+                            <p>Rank: Sergeant 
+                                <div class="ranks">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                </div>
+                            </p>
+                            <span class="status on-duty">● On Duty</span>
+                          </div>
+                        </div>
+                      
+                        <div class="profile-details">
+                          <h3>Officer Details</h3>
+
+                          <ul class="officer-details-ul">
+                            <li><strong>Phone</strong> <span>+260776047932</span></li>
+                            <li><strong>Email</strong> <span>jane.doe@police.gov</span></li>
+                            <li><strong>Location</strong><span>Kabulonga, Lusaka</span></li>
+                            <!-- <li><strong>Unit:</strong> Cyber Crimes</li>
+                            <li><strong>Years of Service:</strong> 8</li>
+                            <li><strong>Assigned Cases:</strong> 32</li> -->
+                          </ul>
+                          <div class="profile-actions">
+                            <button>Edit Profile</button>
+                            <button>View Cases</button>
+                          </div>
+                        </div>
+                    </div>     
+                </div>
+                <div class="officer-stats">
+                    <h3 class="heading-1">Officer Perfomance</h3>
+                    <div>
+                      <ul>
+                        <li>
+                          <span><strong>Assigned Cases</strong></span>
+                          <span class="badge">23</span>
+                        </li>
+                        <li>
+                          <span><strong>Unit</strong></span>
+                          <span>Cyber Crimes</span>
+                        </li>
+                        <li>
+                          <span><strong>Years of service</strong></span>
+                          <span class="badge">23</span>
+                        </li>
+                        <li>
+                          <span><strong>Department</strong></span>
+                          <span>Criminal Investigation</span>
+                        </li>
+                        <li>
+                          <span><strong>Training & Certification</strong></span>
+                          <span>SWAT</span>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="loader-wrapper hidden">
+      <div class="loader"></div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
