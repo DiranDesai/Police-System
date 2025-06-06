@@ -20,6 +20,17 @@ input{
   width: 100% !important;
 }
 
+/* Overlay to darken background */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent layer */
+    z-index: 1;
+}
+
 .loader-wrapper {
   position: fixed;       
   top: 0;
@@ -319,6 +330,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    top: 30%;
+    transform: translateY(-30%);
 }
 
 .login-container{
