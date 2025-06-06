@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Police Management System</title>
+</head>
+<body>
+    <div class="sidebar">
+        <span class="material-icons menu-icon-close">close</span>
+        <div>
+          <img src="images/logo2.png" class="logo" alt="" />
+        </div>
+        <ul>
+          <li class="active">
+            <a href="index.html">
+              <span class="material-icons">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="cases.html">
+              <span class="material-icons">gavel</span> Criminal Cases
+            </a>
+          </li>
+          <li>
+            <a href="criminals.html">
+              <span class="material-icons">block</span> Criminals
+            </a>
+          </li>
+          <li>
+            <a href="duty-schedule.html">
+              <span class="material-icons">schedule</span> Duty Schedule
+            </a>
+          </li>
+          <li>
+            <a href="add-officer.html">
+              <span class="material-icons">person_add</span> Add Officer
+            </a>
+          </li>
+          <li>
+            <a href="duty-roster.html">
+              <span class="material-icons">calendar_today</span> Duty Roster
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="material-icons">support_agent</span> Contact/Support
+            </a>
+          </li>
+        </ul>
+      </div>
+    <main>
+        <div class="navbar flex align-items justify-between">
+            <div>
+              <input type="text" />
+              <span class="material-icons menu-icon">menu</span>
+            </div>
+            <div class="flex nav-profile items-center justify-between">
+              <img src="images/officer1.jpg" class="officer-profile" alt="" />
+              <button type="button" class="signout-btn">
+                <span class="material-icons">logout</span> SignOut
+              </button>
+            </div>
+          </div>
+        <div class="main-content">
+            <div class="grid grid-t-3">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by Case Number, Officer, or Crime Type">
+                    <button type="button">Search</button>
+                    <select>
+                        <option value="all">All Statuses</option>
+                        <option value="open">Open</option>
+                        <option value="closed">Closed</option>
+                        <option value="in-progress">In Progress</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cases-list">
+                <h3>Criminal Cases</h3>
+                <div class="table-wrapper">
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Case Number</th>
+                                <th>Type of Crime</th>
+                                <th>Status</th>
+                                <th>Officer Assigned</th>
+                                <th>Date Reported</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Case 1 -->
+                            <tr>
+                                <td>12345</td>
+                                <td>Theft</td>
+                                <td><span class="status open">Open</span></td>
+                                <td>Officer John Doe</td>
+                                <td>2025-04-01</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 2 -->
+                            <tr>
+                                <td>12346</td>
+                                <td>Assault</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>Officer Jane Smith</td>
+                                <td>2025-03-28</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 3 -->
+                            <tr>
+                                <td>12347</td>
+                                <td>Fraud</td>
+                                <td><span class="status closed">Closed</span></td>
+                                <td>Officer Mark Johnson</td>
+                                <td>2025-03-15</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 4 -->
+                            <tr>
+                                <td>12348</td>
+                                <td>Burglary</td>
+                                <td><span class="status open">Open</span></td>
+                                <td>Officer Sarah Lee</td>
+                                <td>2025-04-05</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 5 -->
+                            <tr>
+                                <td>12349</td>
+                                <td>Homicide</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>Officer Michael Davis</td>
+                                <td>2025-03-20</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 6 -->
+                            <tr>
+                                <td>12350</td>
+                                <td>Drug Possession</td>
+                                <td><span class="status closed">Closed</span></td>
+                                <td>Officer Emily Carter</td>
+                                <td>2025-02-25</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 7 -->
+                            <tr>
+                                <td>12351</td>
+                                <td>Kidnapping</td>
+                                <td><span class="status open">Open</span></td>
+                                <td>Officer David Harris</td>
+                                <td>2025-04-03</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 8 -->
+                            <tr>
+                                <td>12352</td>
+                                <td>Rape</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>Officer Karen Miller</td>
+                                <td>2025-03-30</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 9 -->
+                            <tr>
+                                <td>12353</td>
+                                <td>Vandalism</td>
+                                <td><span class="status open">Open</span></td>
+                                <td>Officer Daniel Thompson</td>
+                                <td>2025-04-07</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                            <!-- Case 10 -->
+                            <tr>
+                                <td>12354</td>
+                                <td>Embezzlement</td>
+                                <td><span class="status closed">Closed</span></td>
+                                <td>Officer Rachel Clark</td>
+                                <td>2025-02-14</td>
+                                <td id="actions">
+                                    <button>Edit</button>
+                                    <button>View Details</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="grid grid-t-2">
+                
+            </div>
+            
+        </div>
+    </main>
+
+    <div class="loader-wrapper hidden">
+        <div class="loader"></div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

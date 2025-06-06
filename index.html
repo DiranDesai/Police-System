@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Police Management System</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <span class="material-icons menu-icon-close">close</span>
+      <div>
+        <img src="images/logo2.png" class="logo" alt="" />
+      </div>
+      <ul>
+        <li class="active">
+          <a href="index.html">
+            <span class="material-icons">dashboard</span> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="cases.html">
+            <span class="material-icons">gavel</span> Criminal Cases
+          </a>
+        </li>
+        <li>
+          <a href="criminals.html">
+            <span class="material-icons">block</span> Criminals
+          </a>
+        </li>
+        <li>
+          <a href="duty-schedule.html">
+            <span class="material-icons">schedule</span> Duty Schedule
+          </a>
+        </li>
+        <li>
+          <a href="add-officer.html">
+            <span class="material-icons">person_add</span> Add Officer
+          </a>
+        </li>
+        <li>
+          <a href="duty-roster.html">
+            <span class="material-icons">calendar_today</span> Duty Roster
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <span class="material-icons">support_agent</span> Contact/Support
+          </a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div class="navbar flex align-items justify-between">
+        <div>
+          <input type="text" />
+          <span class="material-icons menu-icon">menu</span>
+        </div>
+        <div class="flex nav-profile items-center justify-between">
+          <img src="images/officer1.jpg" class="officer-profile" alt="" />
+          <button type="button" class="signout-btn">
+            <span class="material-icons">logout</span> SignOut
+          </button>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="stats grid grid-t-4 space-x-1">
+          <div>
+            <div class="inner">
+              <h3>Total Officers</h3>
+              <div>
+                <span class="material-icons stat-1">group</span>
+              </div>
+            </div>
+            <h2>790</h2>
+            <p>Registered law enforcement officers</p>
+          </div>
+          <div>
+            <div class="inner">
+              <h3>Total Cases</h3>
+              <div>
+                <span class="material-icons stat-2">gavel</span>
+              </div>
+            </div>
+            <h2>30</h2>
+            <p>Criminal cases recorded in the system</p>
+          </div>
+          <div>
+            <div class="inner">
+              <h3>Closed Cases</h3>
+              <div>
+                <span class="material-icons stat-3">circle</span>
+              </div>
+            </div>
+            <h2>5</h2>
+            <p>Successfully resolved and archived.</p>
+          </div>
+          <div>
+            <div class="inner">
+              <h3>Duty Officers</h3>
+              <div>
+                <span class="material-icons stat-4">calendar_today</span>
+              </div>
+            </div>
+            <h2>200</h2>
+            <p>Assigned to patrols or desk duty today.</p>
+          </div>
+        </div>
+        <div class="summary-cards">
+          <div class="summary-card">
+            <h3>Cases This Week</h3>
+            <p class="summary-number">10</p>
+            <p class="summary-text">New cases filed</p>
+          </div>
+
+          <div class="summary-card">
+            <h3>Reports Today</h3>
+            <p class="summary-number">5</p>
+            <p class="summary-text">Submitted reports</p>
+          </div>
+        </div>
+        <div class="grid notify-container grid-t-3">
+          <div class="alerts-section">
+            <h3>Notifications</h3>
+            <div class="alert alert-warning">
+              ⚠️ 3 pending reports need review
+            </div>
+            <div class="alert alert-danger">
+              🔴 2 officers inactive for 7+ days
+            </div>
+            <div class="alert alert-success">
+              ✅ All scheduled patrols completed today
+            </div>
+          </div>
+          <div class="span-2">2</div>
+        </div>
+      </div>
+    </main>
+    <div class="loader-wrapper hidden">
+      <div class="loader"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

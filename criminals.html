@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Police Management System</title>
+</head>
+<body>
+  <div class="sidebar">
+    <span class="material-icons menu-icon-close">close</span>
+    <div>
+      <img src="images/logo2.png" class="logo" alt="" />
+    </div>
+    <ul>
+      <li class="active">
+        <a href="index.html">
+          <span class="material-icons">dashboard</span> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="cases.html">
+          <span class="material-icons">gavel</span> Criminal Cases
+        </a>
+      </li>
+      <li>
+        <a href="criminals.html">
+          <span class="material-icons">block</span> Criminals
+        </a>
+      </li>
+      <li>
+        <a href="duty-schedule.html">
+          <span class="material-icons">schedule</span> Duty Schedule
+        </a>
+      </li>
+      <li>
+        <a href="add-officer.html">
+          <span class="material-icons">person_add</span> Add Officer
+        </a>
+      </li>
+      <li>
+        <a href="duty-roster.html">
+          <span class="material-icons">calendar_today</span> Duty Roster
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span class="material-icons">support_agent</span> Contact/Support
+        </a>
+      </li>
+    </ul>
+  </div>
+  <main>
+      <div class="navbar flex align-items justify-between">
+        <div>
+          <input type="text" />
+          <span class="material-icons menu-icon">menu</span>
+        </div>
+        <div class="flex nav-profile items-center justify-between">
+          <img src="images/officer1.jpg" class="officer-profile" alt="" />
+          <button type="button" class="signout-btn">
+            <span class="material-icons">logout</span> SignOut
+          </button>
+        </div>
+      </div>
+        <div class="main-content">
+            <div class="criminals-page">
+                <div class="header">
+                  <h2>Criminal Records</h2>
+                  <button class="add-btn" id="openModalBtn">+ Add Criminal</button>
+                </div>
+              
+                <div class="search-bar">
+                  <input type="text" id="filterByName" placeholder="Search by name, ID or crime...">
+                </div>
+              
+                <div class="table-wrapper">
+                  <table class="criminals-table responsive-table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Photo</th>
+                        <th>Full Name</th>
+                        <th>Crime</th>
+                        <th>Status</th>
+                        <th>Date Arrested</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="criminalsData" class="criminalList">
+                      <tr class="criminal-record" data-name="james brown">
+                        <td>CR001</td>
+                        <td><img src="images/criminal1.jpg" alt=""></td>
+                        <td>James Brown</td>
+                        <td>Theft</td>
+                        <td><span class="status jailed">Jailed</span></td>
+                        <td>2025-03-21</td>
+                        <td><button>View</button></td>
+                      </tr>
+                      
+                      <tr class="criminal-record" data-name="lonald walland">
+                        <td>CR001</td>
+                        <td><img src="images/criminal2.jpg" alt=""></td>
+                        <td>Lonald Walland</td>
+                        <td>Theft</td>
+                        <td><span class="status jailed">Jailed</span></td>
+                        <td>2025-03-21</td>
+                        <td><button>View</button></td>
+                      </tr>
+                      
+                      <tr class="criminal-record" data-name="geofrey tamiga">
+                        <td>CR001</td>
+                        <td><img src="images/criminal3.jpg" alt=""></td>
+                        <td>Geofrey Tamiga</td>
+                        <td>Theft</td>
+                        <td><span class="status jailed">Custody</span></td>
+                        <td>2025-03-21</td>
+                        <td><button>View</button></td>
+                      </tr>
+                      
+                      <tr class="criminal-record" data-name="mostapher kenny">
+                        <td>CR004</td>
+                        <td><img src="images/criminal4.jpg" alt=""></td>
+                        <td>Mostapher Kenny</td>
+                        <td>Rape</td>
+                        <td><span class="status jailed">Jailed</span></td>
+                        <td>2025-02-25</td>
+                        <td><button>View</button></td>
+                      </tr>
+                      
+                      <tr class="criminal-record" data-name="chinsaka bornwell">
+                        <td>CR005</td>
+                        <td><img src="images/criminal5.jpg" alt=""></td>
+                        <td>Chinsaka Bornwell</td>
+                        <td>Robbery</td>
+                        <td><span class="status jailed">Custody</span></td>
+                        <td>2024-03-11</td>
+                        <td><button>View</button></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              
+                <!-- <div class="pagination">
+                  <button class="prev">Prev</button>
+                  <button class="page-num">1</button>
+                  <button class="page-num">2</button>
+                  <button class="next">Next</button>
+                </div> -->
+              </div>
+        </div>
+  </main>
+    <!-- Modal Structure -->
+    <div id="criminalModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Criminal Record</h2>
+        <form id="criminalForm">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required>
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="">-- Select Gender --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="crimeType">Type of Crime</label>
+          <input type="text" id="crimeType" required>
+
+          <label for="arrestDate">Date of Arrest</label>
+          <input type="date" id="arrestDate" required>
+
+          <label for="status">Status</label>
+          <select id="status" required>
+            <option value="">-- Select Status --</option>
+            <option value="In Custody">In Custody</option>
+            <option value="Released">Released</option>
+            <option value="Wanted">Wanted</option>
+          </select>
+          <button type="submit" class="save">Save Record</button>
+        </form>
+      </div>
+    </div>
+    <div class="loader-wrapper hidden">
+      <div class="loader"></div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
