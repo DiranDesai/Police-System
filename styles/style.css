@@ -384,6 +384,7 @@ input:focus {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  background: linear-gradient(45deg, #144f61, #ff3a38);
 }
 
 /* Sign in button */
@@ -942,3 +943,75 @@ button:hover {
   border-radius: 50%;
   cursor: pointer;
 }
+
+#preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: #000c1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+  }
+  
+  .loader {
+    text-align: center;
+  }
+  
+  .loader img {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .loader p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  /* Siren lights */
+  .siren {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .light {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255,255,255,0.5);
+  }
+  
+  .light.red {
+    background-color: red;
+    animation: flashRed 1s infinite;
+  }
+  
+  .light.blue {
+    background-color: blue;
+    animation: flashBlue 1s infinite;
+  }
+  
+  @keyframes flashRed {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  
+  @keyframes flashBlue {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+  

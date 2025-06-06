@@ -28,3 +28,16 @@ function showLoader(redirect) {
     }, 2000)
 
 }
+
+
+
+window.addEventListener("load", function () {
+    const loader = document.getElementById("preloader");
+    setTimeout(() => {
+        loader.style.display = "none"
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.5s ease";
+    }
+    
+    , 2000);
+  });
